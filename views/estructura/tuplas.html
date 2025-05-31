@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{{extend 'layout.html'}}
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tuplas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 40px;
+      background-color: #111; 
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    ol {
+      background: #1a1a1a;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgb(255, 0, 0);
+    }
+
+    li {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+    }
+
+
+    li:nth-child(1) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(2) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(3) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(4) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(5) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(6) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(7) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(8) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(9) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+    li:nth-child(10) { background-color: rgb(0, 0, 0); color: #ce2a2a; }
+
+    li:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px white;
+    }
+
+    code {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Qué es una tupla?</h1>
+<h3>
+  <ol>
+    <li>Una tupla es una secuencia ordenada e inmutable de elementos.</li>
+    <li>Los elementos están en un orden que no cambia.</li>
+    <li>No se pueden modificar una vez creada.</li>
+    <li>Pueden contener diferentes tipos de datos (números, texto, etc.).</li>
+    <li>Ejemplo en Python: <code>(1, "hola", 3.14)</code></li>
+    <li>Se accede a sus elementos por índice: <code>mi_tupla[1]</code> devuelve <code>"hola"</code>.</li>
+    <li>A diferencia de una lista, que se define con <code>[]</code>, la tupla se define con <code>()</code>.</li>
+    <li><code>{{=tuplas}} {{=type(tuplas)}}</code></li>
+    <li>Conteo:<code>{{=conteo}}</code></li>
+    </ol>
+    </h3>
+
+</body>
+</html>

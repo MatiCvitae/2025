@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Condicional en Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .seccion {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        code {
+            background: #e0e0e0;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Resultado de Condicional</h1>
+
+    <div class="seccion">
+        <h2>Valores usados</h2>
+        <p><strong>Número 1:</strong> {{=numero1}}</p>
+        <p><strong>Número 2:</strong> {{=numero2}}</p>
+        <p><strong>¿Son iguales?:</strong> {{=iguales}}</p>
+        <p><strong>Resultado:</strong> {{=resultado}}</p>
+    </div>
+
+    <div class="seccion">
+        <h2>Explicación del Código</h2>
+        <p>Este ejemplo muestra cómo comparar dos números en Python usando una estructura condicional.</p>
+
+        <p><code>numero1 = 20</code> y <code>numero2 = 20</code> definen dos variables numéricas.</p>
+
+        <p><code>iguales = (numero1 == numero2)</code> guarda <code>True</code> o <code>False</code> dependiendo si los dos números son iguales.</p>
+
+        <p>Luego, el programa evalúa:</p>
+
+        <ul>
+            <li><code>if numero1 &lt; numero2</code>: si es menor, muestra un mensaje diciendo eso.</li>
+            <li><code>elif iguales</code>: si son iguales, muestra otro mensaje.</li>
+            <li><code>else</code>: si no se cumple lo anterior, significa que es mayor.</li>
+        </ul>
+
+        <p>El mensaje se guarda en la variable <code>resultado</code> usando <code>.format()</code>, que es una forma de insertar variables en un texto en Python 2.7.</p>
+
+        <p>Finalmente, todos estos datos se envían a esta página desde el controlador para que puedas verlos en tu navegador.</p>
+    </div>
+
+</body>
+</html>

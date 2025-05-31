@@ -1,0 +1,196 @@
+{{extend 'layout.html'}}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 40px;
+      background-color: #111;
+      color: #fff;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+    }
+    
+    ol {
+      background: #1a1a1a;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgb(255, 0, 0);
+    }
+    
+    li {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+    }
+    
+    li:nth-child(1), li:nth-child(2) { 
+      background-color: rgb(0, 0, 0); 
+      color: #ce2a2a; 
+    }
+    
+    li:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px white;
+    }
+    
+    code {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0ff;
+    }
+    
+    .metodo {
+      background-color: #1a1a1a;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+    
+    .metodo:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+    }
+    
+    .metodo h2 {
+      color: #0ff;
+      margin-top: 0;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+      padding-bottom: 10px;
+    }
+    
+    .metodo p {
+      margin: 15px 0;
+      font-size: 1.1em;
+    }
+    
+    .metodo code {
+      display: block;
+      margin: 15px 0;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-left: 3px solid #0ff;
+    }
+    </style>
+</head>
+<body>
+    <h1>Lista</h1>
+    <ol>
+        <li>Una <code>Lista</code> es una colección ordenada de elementos pero en el contexto de la programación, una lista es una <code>estructura de datos</code> que permite almacenar múltiples elementos de cualquier tipo, ya sean <code>numéricos</code> <code>textos numéricos</code> <code>objetos o otras listas</code></li>
+    </ol>
+    
+    <h1>Métodos que se pueden usar en una lista</h1>
+    <ol>
+        <li>En Python, las listas tienen varios métodos útiles que puedes aplicar para manipular sus elementos. Cada método tiene un propósito específico para trabajar con los elementos de una lista.</li>
+    </ol>
+
+    <!-- Sección detallada de cada método -->
+    <div class="metodo">
+        <h2>{{=metodo1}}</h2>
+        <p>Lista original: ["manzana", "banana"]</p>
+        <p>Después de aplicar <code>append("naranja")</code>:</p>
+        <p>Resultado: <code>{{=frutas1}}</code> <code>{{=type(frutas1)}}</code></p>
+        <code>frutas = ["manzana", "banana"]
+frutas.append("naranja")
+# Resultado: ["manzana", "banana", "naranja"]</code>
+    </div>
+
+    <div class="metodo">
+        <h2>{{=metodo2}}</h2>
+        <p>Lista original: ["manzana", "banana"]</p>
+        <p>Después de aplicar <code>extend(["naranja", "kiwi"])</code>:</p>
+        <p>Resultado: <code>{{=frutas2}}</code> <code>{{=type(frutas2)}}</code></p>
+        <code>frutas = ["manzana", "banana"]
+frutas.extend(["naranja", "kiwi"])
+# Resultado: ["manzana", "banana", "naranja", "kiwi"]</code>
+    </div>
+
+    <div class="metodo">
+        <h2>{{=metodo3}}</h2>
+        <p>Lista original: ["manzana", "banana"]</p>
+        <p>Después de aplicar <code>insert(1, "naranja")</code>:</p>
+        <p>Resultado: <code>{{=frutas3}}</code> <code>{{=type(frutas3)}}</code></p>
+        <code>frutas = ["manzana", "banana"]
+frutas.insert(1, "naranja")
+# Resultado: ["manzana", "naranja", "banana"]</code>
+    </div>
+
+    <div class="metodo">
+        <h2>{{=metodo4}}</h2>
+        <p>Lista original: ["manzana", "banana", "naranja"]</p>
+        <p>Después de aplicar <code>remove("banana")</code>:</p>
+        <p>Resultado: <code>{{=frutas4}}</code> <code>{{=type(frutas4)}}</code></p>
+        <code>frutas = ["manzana", "banana", "naranja"]
+frutas.remove("banana")
+# Resultado: ["manzana", "naranja"]</code>
+    </div>
+
+    <div class="metodo">
+        <h2>{{=metodo5}}</h2>
+        <p>Lista original: ["manzana", "banana", "naranja"]</p>
+        <p>Después de aplicar <code>pop(1)</code>:</p>
+        <p>Elemento extraído: <code>{{=fruta_extraida}}</code></p>
+        <p>Lista resultante: <code>{{=frutas5}}</code> <code>{{=type(frutas5)}}</code></p>
+        <code>frutas = ["manzana", "banana", "naranja"]
+fruta = frutas.pop(1)
+# fruta = "banana"
+# frutas = ["manzana", "naranja"]</code>
+    </div>
+
+    <div class="metodo">
+        <h2>{{=metodo6}}</h2>
+        <p>Lista: ["manzana", "banana", "naranja"]</p>
+        <p>Después de aplicar <code>index("banana")</code>:</p>
+        <p>Índice de "banana": <code>{{=indice}}</code></p>
+        <p>Lista: <code>{{=frutas6}}</code> <code>{{=type(frutas6)}}</code></p>
+        <code>frutas = ["manzana", "banana", "naranja"]
+indice = frutas.index("banana")
+# indice = 1</code>
+    </div>
+
+    <div class="metodo">
+        <h2>{{=metodo7}}</h2>
+        <p>Lista: ["manzana", "banana", "banana", "naranja"]</p>
+        <p>Después de aplicar <code>count("banana")</code>:</p>
+        <p>Cantidad de "banana": <code>{{=cantidad}}</code></p>
+        <p>Lista: <code>{{=frutas7}}</code> <code>{{=type(frutas7)}}</code></p>
+        <code>frutas = ["manzana", "banana", "banana", "naranja"]
+cantidad = frutas.count("banana")
+# cantidad = 2</code>
+    </div>
+
+    <div class="metodo">
+        <h2>{{=metodo8}}</h2>
+        <p>Lista original: ["naranja", "banana", "manzana"]</p>
+        <p>Después de aplicar <code>sort()</code>:</p>
+        <p>Lista ordenada: <code>{{=frutas8}}</code> <code>{{=type(frutas8)}}</code></p>
+        <code>frutas = ["naranja", "banana", "manzana"]
+frutas.sort()
+# Resultado: ["banana", "manzana", "naranja"]</code>
+    </div>
+
+    <div class="metodo">
+        <h2>{{=metodo9}}</h2>
+        <p>Lista original: ["manzana", "banana", "naranja"]</p>
+        <p>Después de aplicar <code>reverse()</code>:</p>
+        <p>Lista invertida: <code>{{=frutas9}}</code> <code>{{=type(frutas9)}}</code></p>
+        <code>frutas = ["manzana", "banana", "naranja"]
+frutas.reverse()
+# Resultado: ["naranja", "banana", "manzana"]</code>
+    </div>
+
+</body>
+</html>
